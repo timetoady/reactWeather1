@@ -5,6 +5,7 @@ const getWeather = (options) => {
     .request(options)
     .then(function (response) {
       console.log(response.data);
+      return response.data;
     })
     .catch(function (error) {
       console.error(error);
