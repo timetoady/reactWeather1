@@ -200,7 +200,7 @@ export default function Weather() {
                   {modalContent.map((hour) => {
                       return (
                         <div className="hourlyDiv" key={hour.dt}>
-                          <p><strong>{hour.dt_txt.substring(11)}</strong>: {hour.weather[0].main}<img src={weatherIconURL + hour.weather[0].icon + ".png"} alt="Weather Icon" ></img>{hour.main.temp}°
+                          <p><strong>{hour.dt_txt.substring(11)}</strong>: {hour.weather[0].main}<img src={weatherIconURL + hour.weather[0].icon + sizeX1} alt="Weather Icon" ></img>{hour.main.temp}°
                             {tempSystem === "imperial" ? "F" : "C"}
                           </p>
                           
