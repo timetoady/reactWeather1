@@ -15,7 +15,7 @@ export default function Weather() {
   const [modalContent, setModalContent] = useState([]);
   const weatherIconURL = "http://openweathermap.org/img/wn/"
   const sizeX2 = "@2x.png"
-  const sizeX1 = "@1x.png"
+  const sizeX1 = ".png"
   const sizeX4 = "@4x.png"
 
   const sleep = (ms) => {
