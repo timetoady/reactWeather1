@@ -92,7 +92,7 @@ export default function Weather() {
       };
 
       if (!location || location.trim() === "") return setWeatherObject({});
-      await sleep(600);
+      await sleep(1000);
       if (currentQuery) {
         setLoading(true);
         //showLoading();
