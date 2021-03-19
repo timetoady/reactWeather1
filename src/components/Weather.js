@@ -13,6 +13,10 @@ export default function Weather() {
   const [modal, setModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalContent, setModalContent] = useState([]);
+  const weatherIconURL = "http://openweathermap.org/img/wn/"
+  const sizeX2 = "@2x.png"
+  const sizeX1 = "@1x.png"
+  const sizeX4 = "@4x.png"
 
   const sleep = (ms) => {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -158,6 +162,7 @@ export default function Weather() {
             <h2 className="currentCity">{weatherObject.weather.name}</h2>
             <p>is</p>
             <h4 className="weatherType">{weatherObject.weather.weather[0].main}</h4>
+            <img src={weatherIconURL + weatherObject.weather.weather[0].icon + sizeX4} alt="Weather Icon" ></img>
             <h3 className="currentTemp">
               {weatherObject.weather.main.temp}°{""}
               {tempSystem === "imperial" ? "F" : "C"}
@@ -173,11 +178,12 @@ export default function Weather() {
         {forecast.map((day) => {
           //console.log(day);
           return (
-            <div  key={day.dt_txt} onClick={() => handleModal(day)}>
+            <div className="forecastTile" key={day.dt_txt} onClick={() => handleModal(day)}>
               
               
                 <p>{day[4].dt_txt.substring(0, 10)}</p>
                 <p>{day[4].weather[0].main}</p>
+                <img src={weatherIconURL + day[4].weather[0].icon + sizeX2} alt="Weather Icon" ></img>
                 <p>
                   {day[4].main.temp}°{tempSystem === "imperial" ? "F" : "C"}
                 </p>
@@ -194,9 +200,10 @@ export default function Weather() {
                   {modalContent.map((hour) => {
                       return (
                         <div className="hourlyDiv" key={hour.dt}>
-                          <p><strong>{hour.dt_txt.substring(11)}</strong>: {hour.weather[0].main}, {hour.main.temp}°
+                          <p><strong>{hour.dt_txt.substring(11)}</strong>: {hour.weather[0].main}<img src={weatherIconURL + hour.weather[0].icon + ".png"} alt="Weather Icon" ></img>{hour.main.temp}°
                             {tempSystem === "imperial" ? "F" : "C"}
                           </p>
+                          
                         </div>
                       );
                     })}

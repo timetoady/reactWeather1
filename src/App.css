@@ -36,12 +36,18 @@ label{
 
 .forecastDiv div{
   cursor: pointer;
-  border: thick double rgb(32, 119, 218);
+  border: thick double #2077da;
   box-shadow: 2px 2px 5px black;
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 10px;
   row-gap: 1rem;
+}
+
+.forecastTile{
+  background-color: #F7D711;
+  color: #292929;
+  text-align: center;
 }
 
 .currentWeatherDiv{
@@ -73,10 +79,28 @@ label{
 }
 
 div.modal-body{
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
+
+}
+
+div.modal-content{
+  background-color: #F7D711;
+  color: #292929;
+  border: thick double #2077da;
+  box-shadow: 2px 2px 5px black;
+}
+
+div.modal-header{
+  border-bottom: thick double #2077da;
+  background-color: #fdf13fc9;
+}
+
+div.modal-footer{
+  border-top: thick double #2077da;
+  background-color: #9b880ec9;
 }
