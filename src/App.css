@@ -1,6 +1,9 @@
+main{
+  background-color: #292929;
+}
 .app{
   padding: .5rem;
-  background-color: #f4f4f4;
+  background-color: #fafafa;
   border-radius: 0 0 80px 10px;
   box-shadow: 2px 2px 10px black;
 }
@@ -45,7 +48,7 @@ label{
 }
 
 .forecastTile{
-  background-color: #F7D711;
+  background-color: rgba(250, 227, 77, 0.733);
   color: #292929;
   text-align: center;
 }
@@ -89,7 +92,7 @@ div.modal-body{
 }
 
 div.modal-content{
-  background-color: #F7D711;
+  background-color: rgba(250, 227, 77, 0.966);
   color: #292929;
   border: thick double #2077da;
   box-shadow: 2px 2px 5px black;
@@ -97,7 +100,13 @@ div.modal-content{
 
 div.modal-header{
   border-bottom: thick double #2077da;
-  background-color: #fdf13fc9;
+  
+  background-color: #9b880ec9;
+}
+
+div.modal-header h5{
+  color: #ffffff;
+  text-shadow: 1px 2px 5px black;
 }
 
 div.modal-footer{
