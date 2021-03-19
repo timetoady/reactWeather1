@@ -1,5 +1,14 @@
 .app{
   padding: .5rem;
+  background-color: #f4f4f4;
+  border-radius: 0 0 80px 10px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.title{
+  color: rgb(32, 119, 218);
+  font-weight: 100;
+  font-size: 3rem;
 }
 
 .forecastDiv{
@@ -11,9 +20,24 @@
   margin: 0 auto;
 }
 
+.searchBox{
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: .5rem;
+}
+label{
+  font-size: 1.2rem;
+  margin-left: .25rem;
+}
+
+.forcastTitle{
+  margin-bottom: -5px;
+}
+
 .forecastDiv div{
   cursor: pointer;
-  border: 2px solid black;
+  border: thick double rgb(32, 119, 218);
+  box-shadow: 2px 2px 5px black;
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 10px;

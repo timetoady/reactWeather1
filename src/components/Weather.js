@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-//next, need to parse forcase data to display 5 day forcast, display it in cards.
-//Then, on click show modal with 3 hour forcast for selected day.
+//To do: style tweaks, encorporate icons
 export default function Weather() {
   const [location, setLocation] = useState("");
   const [tempSystem, setTempSystem] = useState("imperial");
@@ -120,6 +119,7 @@ export default function Weather() {
       <h2>Your Weather:</h2>
       <input
         type="text"
+        className="searchBox"
         autoFocus
         value={location}
         onChange={handleLocation}
@@ -159,13 +159,13 @@ export default function Weather() {
             <p>is</p>
             <h4 className="weatherType">{weatherObject.weather.weather[0].main}</h4>
             <h3 className="currentTemp">
-              {weatherObject.weather.main.temp}°{" "}
+              {weatherObject.weather.main.temp}°{""}
               {tempSystem === "imperial" ? "F" : "C"}
             </h3>
             <p className="feelsLike">but feels like {weatherObject.weather.main.feels_like}.</p>
             
               </div>
-              <h2>Forecast:</h2>
+              <h2 className="forcastTitle">Forecast:</h2>
               <h6>for 3PM local time. Click to see hourly forecast for every three hours.</h6>
               <div className="forecastDiv">
 
